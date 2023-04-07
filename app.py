@@ -231,27 +231,43 @@ def play_game(wn):
     # Paddle A Movement
     def paddleA_up():
         y = paddleA.ycor()
-        if y + 20 < 250:
-            y += 20
+        if settings["paddle_size"] == "Normal":
+            if y + 20 < 250:
+                y += 20
+        else:
+            if y + 20 < 300:
+                y += 20
         paddleA.sety(y)
 
     def paddleA_down():
         y = paddleA.ycor()
-        if y - 20 > -250:
-            y -= 20
+        if settings["paddle_size"] == "Normal":
+            if y - 20 > -250:
+                y -= 20
+        else:
+            if y - 20 > -300:
+                y -= 20
         paddleA.sety(y)
 
     # PaddleB Movement:
     def paddleB_up():
         y = paddleB.ycor()
-        if y + 20 < 250:
-            y += 20
+        if settings["paddle_size"] == "Normal":
+            if y + 20 < 250:
+                y += 20
+        else:
+            if y + 20 < 300:
+                y += 20
         paddleB.sety(y)
 
     def paddleB_down():
         y = paddleB.ycor()
-        if y - 20 > -250:
-            y -= 20
+        if settings["paddle_size"] == "Normal":
+            if y - 20 > -250:
+                y -= 20
+        else:
+            if y - 20 > -300:
+                y -= 20
         paddleB.sety(y)
 
     wn.listen()
